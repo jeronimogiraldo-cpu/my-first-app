@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Eventos - Colegio Bolívar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f5f9;
+            margin: 0;
+            padding: 50px 20px;
+        }
+
+        .contenedor {
+            background-color: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #003366;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        #contador {
+            font-size: 60px;
+            font-weight: bold;
+            color: #003366;
+            margin: 25px 0;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 8px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #botonClick {
+            background-color: #003366;
+            color: white;
+        }
+
+        #botonClick:hover {
+            background-color: #00509e;
+        }
+
+        #botonReiniciar {
+            background-color: #dddddd;
+            color: #333;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Colegio Bolívar</h1>
+        <p>Contador interactivo de eventos</p>
+
+        <div id="contador">0</div>
+
+        <button id="botonClick" onclick="incrementarContador()">
+            Registrar evento
+        </button>
+
+        <button id="botonReiniciar" onclick="reiniciarContador()">
+            Reiniciar
+        </button>
+
+        <p>Total de eventos registrados</p>
+    </div>
+
+    <script>
+        let clicks = 0;
+
+        function incrementarContador() {
+            clicks++;
+            document.getElementById("contador").textContent = clicks;
+        }
+
+        function reiniciarContador() {
+            clicks = 0;
+            document.getElementById("contador").textContent = clicks;
+        }
+    </script>
+
+</body>
+</html>
